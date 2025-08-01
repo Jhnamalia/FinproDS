@@ -1,9 +1,14 @@
 import streamlit as st 
-import joblib
 import re
 import nltk
+import requests
+import joblib
+from io import BytesIO
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+import gdown
+import tempfile
+import os
 
 # --- Setup halaman ---
 st.set_page_config(page_title="Sentiment Predictor", layout="centered")
@@ -13,9 +18,21 @@ st.markdown("Masukkan review aplikasi, dan model akan memprediksi sentimennya:")
 # --- Download stopwords ---
 nltk.download('stopwords')
 
-# --- Load model & vectorizer ---
-model = joblib.load('rf_sentiment_model.pkl')
-vectorizer = joblib.load('tfidf_vectorizer.pkl')
+# --- Load model & vectorizer dari Google Drive ---
+@st.cache_resource
+def load_from_drive_gdown(file_id, filename):
+    url = f"https://drive.google.com/uc?id={file_id}"
+    temp_dir = tempfile.gettempdir()
+    output_path = os.path.join(temp_dir, filename)
+    gdown.download(url, output_path, quiet=False)
+    return joblib.load(output_path)
+
+# ID Google Drive
+model = load_from_drive_gdown("1xJn2KEJ3VNt4ij9aoge45ZEtBrA-3ODQ", "rf_sentiment_model.pkl")
+vectorizer = load_from_drive_gdown("1xRFKwhVHVbMIPIAlGTO1COKwmhjJgnLY", "tfidf_vectorizer.pkl")
+
+if model is None or vectorizer is None:
+    st.stop()
 
 # --- Setup stopwords ---
 custom_stopwords = set(stopwords.words('english')).union(ENGLISH_STOP_WORDS)
