@@ -11,25 +11,23 @@ Tools: Google Colab, VS Code, Streamlit, Plotly, Scikit-learn, Random Forest
 
 🤖 Machine Learning Assets
 Due to size limits on GitHub and Streamlit Cloud, model files are hosted on Google Drive:
-
 rf_sentiment_model.pkl
 📎 [Download](https://drive.google.com/file/d/1xJn2KEJ3VNt4ij9aoge45ZEtBrA-3ODQ/view?usp=drive_link)
-
 tfidf_vectorizer.pkl
 📎 [Download](https://drive.google.com/file/d/1xRFKwhVHVbMIPIAlGTO1COKwmhjJgnLY/view?usp=drive_link)
 
 The app uses gdown to download these files at runtime.
 
 📊 Dashboard Features
-📈 Exploratory Data Analysis (EDA)
-Sentiment distribution
-Rating comparisons across app types (Free vs Paid)
-Category-level trends and installs
+- 📈 Exploratory Data Analysis (EDA)
+  - Sentiment distribution
+  - Rating comparisons across app types (Free vs Paid)
+  - Category-level trends and installs
 
-🔍 Sentiment Prediction
-Enter review text and get predicted sentiment
-Based on trained Random Forest model (TF-IDF + metadata)
+- 🔍 Sentiment Prediction
+  - Enter review text and get predicted sentiment
+  - Based on trained Random Forest model (TF-IDF + metadata)
 
-☁️ WordCloud Visualization
+- ☁️ WordCloud Visualization
 Top keywords per sentiment category
 Cleaned with custom stopwords
