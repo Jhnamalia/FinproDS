@@ -30,7 +30,7 @@ with col1:
     ✅ Visualized insights and patterns in user behavior.
     """)
     st.markdown("📊 Dataset Source: [Kaggle - Google Play Store Apps](https://www.kaggle.com/lava18/google-play-store-apps)")
-    st.markdown("📎 Project Slide Deck: [Google Slides](https://docs.google.com/presentation/d/1FLzU_eFjNTIdS6zf42Y40LGZyQvp3UDSVW19GrrpLyQ/edit?slide=id.g36f310a72ef_0_0#slide=id.g36f310a72ef_0_0)")
+    st.markdown("📎 Project Slide Deck: [Google Slides](https://drive.google.com/file/d/15vKzdTrFNF9q3VB-NaBoReRg0uXaJ9kj/view?usp=sharing)")
     st.markdown("---")
     st.markdown("### 📬 **Contact Me**")
     st.write("""

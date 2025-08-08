@@ -21,6 +21,9 @@ with col1:
         """
         🔹 [**LinkedIn**](https://www.linkedin.com/in/jihanamalia/)  
         [![LinkedIn Badge](https://img.shields.io/badge/-Jihan_Amalia-blue?logo=linkedin&style=flat)](https://www.linkedin.com/in/jihanamalia/)
+
+        🐙 [**GitHub**](https://github.com/Jhnamalia)  
+        [![GitHub Badge](https://img.shields.io/badge/-Jhnamalia-181717?logo=github&style=flat)](https://github.com/Jhnamalia)
         """
     )
 
